@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: query-guard-test-app
+  datasource:
+    url: jdbc:postgresql://localhost:5432/qg-test-db
+    username: qg-user
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+logging:
+  file:
+    name: logs/queryguard.log
+  level:
+    io.poojithairosha: INFO
+query-guard:
+  enabled: true
+  analyzers:
+    duplicate: true
+    n-plus-one: true
+  logging:
+    enabled: true
+  tracing:
+    exclude-paths:
+      - /actuator/**
+      - /favicon.ico
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+      cors:
+        allowed-origins: "http://localhost:5173"
+        allowed-methods: GET
+        allowed-headers: "*"
+  metrics:
+    tags:
+      application: queryguard
