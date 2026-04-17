@@ -38,10 +38,11 @@ This demo exists to:
 The application uses the Query Guard Spring Boot starter from Maven Central:
 
 ```xml
+<!-- Spring Boot 3.x -->
 <dependency>
     <groupId>io.github.poojithairosha</groupId>
     <artifactId>query-guard-spring-boot-starter</artifactId>
-    <version>1.0.0</version>
+    <version>1.x.x</version>
 </dependency>
 ```
 
