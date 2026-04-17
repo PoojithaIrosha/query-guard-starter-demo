@@ -20,7 +20,7 @@ This demo exists to:
 ## 3. Tech Stack
 
 - Java 21
-- Spring Boot 3.5.13
+- Spring Boot 4.0.5
 - Spring Web
 - Spring Data JPA
 - Spring Boot Actuator
@@ -38,10 +38,11 @@ This demo exists to:
 The application uses the Query Guard Spring Boot starter from Maven Central:
 
 ```xml
+<!-- Spring Boot 4.x -->
 <dependency>
     <groupId>io.github.poojithairosha</groupId>
     <artifactId>query-guard-spring-boot-starter</artifactId>
-    <version>1.0.0</version>
+    <version>2.x.x</version>
 </dependency>
 ```
 
