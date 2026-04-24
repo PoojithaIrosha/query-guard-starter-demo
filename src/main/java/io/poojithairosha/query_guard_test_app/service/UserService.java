@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -36,10 +37,10 @@ public class UserService {
         return users.stream().map(user -> {
             List<String> courses = user.getEnrollments().stream()
                     .map(e -> e.getCourse().getTitle())
-                    .toList();
+                    .collect(Collectors.toList());
 
             return new UserDTO(user.getId(), user.getName(), courses);
-        }).toList();
+        }).collect(Collectors.toList());
     }
 
 }
