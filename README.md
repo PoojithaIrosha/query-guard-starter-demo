@@ -19,14 +19,13 @@ This demo exists to:
 
 ## 3. Tech Stack
 
-- Java 21
-- Spring Boot 3.5.13
+- Java 11
+- Spring Boot 2.7.10
 - Spring Web
 - Spring Data JPA
 - Spring Boot Actuator
 - Micrometer Prometheus registry
 - PostgreSQL
-- Docker Compose
 - Loki
 - Promtail
 - Grafana
@@ -38,11 +37,11 @@ This demo exists to:
 The application uses the Query Guard Spring Boot starter from Maven Central:
 
 ```xml
-<!-- Spring Boot 3.x -->
+<!-- Spring Boot 2.x -->
 <dependency>
     <groupId>io.github.poojithairosha</groupId>
     <artifactId>query-guard-spring-boot-starter</artifactId>
-    <version>1.x.x</version>
+    <version>1.x.x-sb2</version>
 </dependency>
 ```
 
